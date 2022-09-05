@@ -1,0 +1,27 @@
+.contact {
+  max-width: 975px;
+  color: white; 
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contact__title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.33;
+  margin-bottom: 100px;
+
+  @include tablets {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 59px;
+  }
+
+  @include phones {
+    font-size: 24px;
+  }
+  
+}
