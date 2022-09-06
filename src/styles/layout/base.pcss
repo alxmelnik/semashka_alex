@@ -24,23 +24,40 @@ body {
   overflow: hidden;
   min-height: 100%;
   position: relative;
+  background-color: rgba(8, 102, 102, 0.5);
+  transition: transform 1s;
+  display: flex;
+  flex-direction: column;
+
+  // height: 100%;
 }
 
-.wrapper__content {
-  height: 100%;
-  transition: transform 1s;
-  // flex: 1;
-}
+// .wrapper__content {
+//   // min-height: 100%;
+//   // height: 100%;
+//   transition: transform 1s;
+//   display: flex;
+//   flex-direction: column;
+  
+//   // flex: 1 0 auto;
+// }
 
 .container {
   margin: 0 auto;
-  max-width: 1480px;
+  max-width: 1200px;
+  // max-width: 1480px;
   width: 95%;
   // width: 1490px;
+  
 
   @include phones {
     width: 85%;
   }
+}
+
+section {
+  height: 100vh;
+  border-bottom: 2px solid green;
 }
 
 .fullscreen-section {

@@ -9,7 +9,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env, argv) => {
   const isProductionBuild = argv.mode === "production";
-  const publicPath = '/melnik-web/';
+  const publicPath = '/semashka_alex/';
 
   const pcss = {
     test: /\.(p|post|)css$/,
@@ -70,23 +70,23 @@ module.exports = (env, argv) => {
     ]
   };
 
-  const pug = {
-    test: /\.pug$/,
-    oneOf: [
-      {
-        resourceQuery: /^\?vue/,
-        use: ["pug-plain-loader"]
-      },
-      {
-        use: ["pug-loader"]
-      }
-    ]
-  };
+  // const pug = {
+  //   test: /\.pug$/,
+  //   oneOf: [
+  //     {
+  //       resourceQuery: /^\?vue/,
+  //       use: ["pug-plain-loader"]
+  //     },
+  //     {
+  //       use: ["pug-loader"]
+  //     }
+  //   ]
+  // };
 
   const config = {
     entry: {
       main: ["@babel/polyfill", "./src/main.js"],
-      admin: ["@babel/polyfill", "./src/admin/main.js"]
+      // admin: ["@babel/polyfill", "./src/admin/main.js"]
     },
     output: {
       path: path.resolve(__dirname, "./dist"),
@@ -95,7 +95,9 @@ module.exports = (env, argv) => {
       chunkFilename: "[chunkhash].js"
     },
     module: {
-      rules: [pcss, vue, js, files, svg, pug]
+      rules: [pcss, vue, js, files, svg, 
+        // pug
+      ]
     },
     resolve: {
       alias: {
@@ -114,14 +116,14 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "src/index.pug",
+        template: "src/index.html",
         chunks: ["main"]
       }),
-      new HtmlWebpackPlugin({
-        template: "src/admin/index.pug",
-        filename: "admin/index.html",
-        chunks: ["admin"]
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: "src/admin/index.html",
+      //   filename: "admin/index.html",
+      //   chunks: ["admin"]
+      // }),
       new SpriteLoaderPlugin({ plainSprite: true }),
       new VueLoaderPlugin()
     ],

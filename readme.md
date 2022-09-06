@@ -1,4 +1,4 @@
-# Учебный шаблон проекта Portfolio
+# Шаблон проекта Детского садика "Семьяшка"
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
 [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
@@ -9,15 +9,14 @@
 
 | ФИО | Мельник Александр Игоревич |
 | ------ | ------ |
-| Номер домашнего задания | ДЗ 1 |
-| Ссылка на репозиторий | https://github.com/alxmelnik/melnik-web/tree/newbranch|
-| Ссылка на рабочий сайт | https://alxmelnik.github.io/melnik-web/|
+| Ссылка на репозиторий | https://github.com/alxmelnik/semashka_alex/tree/newbranch|
+| Ссылка на рабочий сайт | https://alxmelnik.github.io/semashka_alex/|
 | Примечания | - |
 
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone https://github.com/alxmelnik/melnik-web.github.io.git
+$ git clone https://github.com/alxmelnik/semashka_alex.github.io.git
 $ cd ls-advanced-portfolio
 $ yarn
 ```
