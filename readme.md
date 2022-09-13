@@ -17,7 +17,7 @@
 ##  Чтобы развернуть проект необходимо:
 ```sh
 $ git clone https://github.com/alxmelnik/semashka_alex.github.io.git
-$ cd ls-advanced-portfolio
+$ cd project
 $ yarn
 ```
 
